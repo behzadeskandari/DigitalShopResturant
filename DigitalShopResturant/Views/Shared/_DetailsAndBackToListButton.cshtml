@@ -1,0 +1,19 @@
+﻿@*
+  For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model int
+
+
+
+<div class="row">
+  <div class="col-md-6">
+    <a asp-action="Edit" asp-route-id="@Model" class="btn btn-info form-control">ویرایش</a>
+  </div>
+  <div class="col-md-6">
+    <a asp-action="Index" class="btn btn-success form-control">بازگشت به لیست </a>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@model DigitalShopResturant.Models.ViewModels.OrderDetailsViewModel
+@{
+  ViewData["Title"] = "Confirm";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="backgroundWhite">
+  <div class="row px-3">
+    <div class="col-8">
+      <h2 class="text-info">تایید سفارش</h2>
+    </div>
+    <div class="col-4 text-right">
+      <a asp-action="Index" asp-controller="Home" class="btn btn-success form-control">سفارش جدید</a>
+    </div>
+  </div>
+
+  @if (Model.OrderHeader != null)
+  {
+    <div style="color:maroon" class="p-3">
+     سفارش شما تایید شد جزییات سفارش را در ادامه مشاهده فرمایید 
+      <br />
+    برای سوالات بیشتر باما تماس حاصل فرمایید
+    </div>
+    <partial name="_IndividualOrderDetails" model="Model" />
+  }
+  else
+  {
+    <div class="text-danger"> مشکل لطفا دوباره تلاش کنید</div>
+  }
+</div>
